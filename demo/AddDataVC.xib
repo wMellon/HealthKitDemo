@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddDataVC">
+            <connections>
+                <outlet property="typePicker" destination="vSy-S5-KeD" id="nJR-EJ-1LW"/>
+                <outlet property="unitLabel" destination="lbT-I7-x3q" id="KjB-pa-8My"/>
+                <outlet property="valueTextField" destination="6Ww-VH-PHu" id="m41-yD-v9a"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vSy-S5-KeD">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="8m4-Jh-gR6"/>
+                    </constraints>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="gpu-j0-4VX"/>
+                        <outlet property="delegate" destination="-1" id="N1I-08-zhe"/>
+                    </connections>
+                </pickerView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lbT-I7-x3q">
+                    <rect key="frame" x="0.0" y="55" width="375" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Ww-VH-PHu">
+                    <rect key="frame" x="0.0" y="91" width="375" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I5o-tE-1SS">
+                    <rect key="frame" x="173" y="146" width="30" height="30"/>
+                    <state key="normal" title="保存"/>
+                    <connections>
+                        <action selector="save:" destination="-1" eventType="touchUpInside" id="bLr-Al-8nA"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="vSy-S5-KeD" secondAttribute="trailing" id="9yr-Zv-0I5"/>
+                <constraint firstAttribute="trailing" secondItem="6Ww-VH-PHu" secondAttribute="trailing" id="AEa-I3-wny"/>
+                <constraint firstItem="I5o-tE-1SS" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="DPT-Yo-KVr"/>
+                <constraint firstItem="I5o-tE-1SS" firstAttribute="top" secondItem="6Ww-VH-PHu" secondAttribute="bottom" constant="25" id="Dgr-Zl-yIt"/>
+                <constraint firstItem="lbT-I7-x3q" firstAttribute="top" secondItem="vSy-S5-KeD" secondAttribute="bottom" constant="15" id="GF8-93-O3L"/>
+                <constraint firstItem="vSy-S5-KeD" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ITB-VT-ZXY"/>
+                <constraint firstAttribute="trailing" secondItem="lbT-I7-x3q" secondAttribute="trailing" id="JoA-Gd-nxq"/>
+                <constraint firstItem="vSy-S5-KeD" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Xou-RT-8I1"/>
+                <constraint firstItem="6Ww-VH-PHu" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="aB5-Ea-gII"/>
+                <constraint firstItem="6Ww-VH-PHu" firstAttribute="top" secondItem="lbT-I7-x3q" secondAttribute="bottom" constant="15" id="dKB-hr-reC"/>
+                <constraint firstItem="lbT-I7-x3q" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="xhs-eQ-FfP"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+        </view>
+    </objects>
+</document>
